@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   const [Todos, setTodos] = useState([])
   useEffect(() =>{
+    console.log("fetch call");
     fetch("https://sum-server.100xdevs.com/todos")
     .then(async function(res){
      const json =await res.json();
